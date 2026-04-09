@@ -1,0 +1,15 @@
+[ SENSOR ] -> (Vibration) 
+    │
+[ ESP32 ]  -> (FFT @ Edge + MQTT)
+    │
+    ▼
+[ FASTAPI GATEWAY ] ───▶ [ POSTGRESQL ] (Historie)
+    │                         ▲
+    ▼                         │
+[ SIGNAL ENGINE ] ────────────┘ 
+    │ (Berechnung von Kurtosis, RMS, FFT)
+    ▼
+[ AI PREDICTOR ] (Grok API / Scikit-Learn)
+    │ (Prediction: "Lager stirbt in 10h")
+    ▼
+[ STREAMLIT DASHBOARD ]

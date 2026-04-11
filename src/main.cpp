@@ -7,9 +7,9 @@
 #include <Adafruit_NeoPixel.h>
 
 // --- CONFIG ---
-const char* ssid = "FRITZ!Box 6670 WQ";
-const char* password = "58235320063236644333";
-const char* mqtt_server = "192.168.178.21"; // YOUR LAPTOP IP
+const char* ssid = "bla bla";
+const char* password = "090900//hahaha";
+const char* mqtt_server = "12.uuccuu"; 
 
 #define PIN_RGB 48  // Change to 38 if 48 doesn't work
 Adafruit_NeoPixel pixels(1, PIN_RGB, NEO_GRB + NEO_KHZ800);

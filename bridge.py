@@ -4,11 +4,11 @@ from influxdb_client import InfluxDBClient, Point
 from influxdb_client.client.write_api import SYNCHRONOUS
 import json
 
-# --- CONFIG (Verify these match your fresh setup!) ---
-INFLUX_TOKEN = "4w9v92QAkMUoU6iQEMfXHNcQuVbXMLUZncBL235IUYe7MoKI2tIkjMWixVX1shAXKKVu3fjnDWYNiS6lSF5MDw=="
-INFLUX_ORG = "TusharTech"
-INFLUX_BUCKET = "b744e22d21c4630c"
-INFLUX_URL = "http://127.0.0.1:8086"
+# --- CONFIG---
+INFLUX_TOKEN = "some token id"
+INFLUX_ORG = "some techy name"
+INFLUX_BUCKET = "idk"
+INFLUX_URL = "http:etc.."
 
 client = InfluxDBClient(url=INFLUX_URL, token=INFLUX_TOKEN, org=INFLUX_ORG)
 write_api = client.write_api(write_synchronous=SYNCHRONOUS)

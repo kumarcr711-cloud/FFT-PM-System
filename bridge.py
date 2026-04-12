@@ -1,4 +1,4 @@
-print("--- SCRIPT STARTING ---")
+print("--- SCRIPT STARTING ---") // to confirm initialisation of the script
 import paho.mqtt.client as mqtt
 from influxdb_client import InfluxDBClient, Point
 from influxdb_client.client.write_api import SYNCHRONOUS

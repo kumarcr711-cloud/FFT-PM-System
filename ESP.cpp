@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <Wire.h>
-#include <arduinoFFT.h>  // Install via PlatformIO Lib Deps
+#include <arduinoFFT.h> 
 #include <PubSubClient.h> // For MQTT
 #include <WiFi.h>
 

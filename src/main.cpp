@@ -11,7 +11,7 @@ const char* ssid = "bla bla";
 const char* password = "090900//hahaha";
 const char* mqtt_server = "12.uuccuu"; 
 
-#define PIN_RGB 48  // Change to 38 if 48 doesn't work
+#define PIN_RGB 48 
 Adafruit_NeoPixel pixels(1, PIN_RGB, NEO_GRB + NEO_KHZ800);
 Adafruit_MPU6050 mpu;
 WiFiClient espClient;

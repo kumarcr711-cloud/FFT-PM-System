@@ -20,7 +20,7 @@ The project follows a strict **3-Layer Architectural Pattern** to ensure modular
 ## Tech Stack
 - **Backend:** Python 3.10+, FastAPI, Uvicorn
 - **Data Science:** NumPy, SciPy (FFT/Signal Processing), Scikit-learn
-- **Hardware/Edge:** ESP32, CPP
+- **Hardware/Edge:** ESP32, MPU6050
 - **DevOps:** Docker, Docker Compose, Pydantic (Data Validation)
 - **Database:** PostgreSQL / SQLite
 

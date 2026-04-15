@@ -7,7 +7,7 @@
 #include <Adafruit_NeoPixel.h>
 
 // --- CONFIG ---
-const char* ssid = "bla bla";
+const char* ssid = "bla bla"; //The values here are changed for privacy reasons
 const char* password = "090900//hahaha";
 const char* mqtt_server = "12.uuccuu"; 
 

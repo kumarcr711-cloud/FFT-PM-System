@@ -2,6 +2,7 @@
 
 ##  Overview
 This project implements a scalable, end-to-end Predictive Maintenance solution designed for industrial rotating machinery. It leverages high-frequency vibration data (NASA Bearing Dataset) to predict Remaining Useful Life (RUL) and detect early-stage mechanical failures.
+The system will also learn how to classify different failure types (loose bolt, unbalanced load etc.. ) and suggest precautions according to the failure type.
 
 The system is built with a focus on **Industrial IoT (IIoT) architectures**, bridging the gap between Edge hardware (ESP32) and Cloud-based AI inference.
 

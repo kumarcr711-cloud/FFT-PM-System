@@ -60,7 +60,7 @@ Development stage: prototype.
 
 This repository is intended to show practical work on embedded sensing, signal processing, and data pipeline fundamentals. 
 
-Here are demo videos
+## Demo Videos of the progress so far:
 
 First video captures the reading on InfluxDB and spike is caused due to failure caused manually to test edge device and pipeline functionality (successful here)
 

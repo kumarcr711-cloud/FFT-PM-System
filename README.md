@@ -1,33 +1,65 @@
-#  Industrial-Edge Predictive Maintenance (PdM) System
+# FFT-PM-System
 
-##  Overview
-This project implements a scalable, end-to-end Predictive Maintenance solution designed for industrial rotating machinery. It leverages high-frequency vibration data (NASA Bearing Dataset) to predict Remaining Useful Life (RUL) and detect early-stage mechanical failures.
+Predictive maintenance prototype focused on vibration analysis for rotating machinery.
 
-The system is built with a focus on **Industrial IoT (IIoT) architectures**, bridging the gap between Edge hardware (ESP32) and Cloud-based AI inference.
+This repository combines:
+- ESP32 firmware for vibration capture and MQTT publishing
+- Python scripts/notebooks for FFT-based analysis on bearing data
+- early data-bridge code for MQTT to InfluxDB
 
-##  System Architecture
-The project follows a strict **3-Layer Architectural Pattern** to ensure modularity and scalability:
+The project is still in progress. Current code demonstrates core ideas and working building blocks, not a full production system.
 
-1. **Edge Layer (ESP32/Simulator):** High-frequency data acquisition and initial signal preprocessing.
-2. **Logic Layer (FastAPI & Signal Engine):** - Digital Signal Processing (FFT, Kurtosis, RMS calculation).
-   - AI Inference using structured predictive models.
-3. **Infrastructure & Persistence:**
-   - PostgreSQL for time-series data storage.
-   - Docker-containerized environment for SRE-compliant deployment.
+## Current Scope
 
+Implemented:
+- ESP32 data acquisition with MPU6050
+- MQTT publish flow from device side
+- FFT, RMS, and kurtosis experiments in Python
+- initial MQTT to InfluxDB bridge script
 
+Planned next:
+- clean service boundaries (edge, ingestion, analytics)
+- reproducible runtime setup and dependency management
+- proper automated tests and CI checks
+- dashboard/API layer and stronger documentation
 
-## Tech Stack
-- **Backend:** Python 3.10+, FastAPI, Uvicorn
-- **Data Science:** NumPy, SciPy (FFT/Signal Processing), Scikit-learn
-- **Hardware/Edge:** ESP32, MPU6050
-- **DevOps:** Docker, Docker Compose, Pydantic (Data Validation)
-- **Database:** PostgreSQL / SQLite
+## Repository Structure
 
-## Key Features
-- **Real-time Signal Processing:** Implementation of Hamming windows and FFT for spectral leakage reduction.
-- **Condition Indicators:** Real-time tracking of Kurtosis and RMS to identify the "Death Curve" of bearings.
-- **Automated Alerts:** Status-based notification system (Healthy, Warning, Critical).
-- **Industrial Standards:** Built following ISO 20816 standards for mechanical vibration.
+- [src/main.cpp](src/main.cpp): ESP32 firmware (Wi-Fi, sensor readout, MQTT publish)
+- [ESP.cpp](ESP.cpp): edge-side FFT/RMS feature extraction prototype
+- [bridge.py](bridge.py): MQTT to InfluxDB bridge prototype
+- [fft_pipeline.ipynb](fft_pipeline.ipynb): notebook experiments on bearing data
+- [test_fft.py](test_fft.py): simple FFT simulation script
+- [data/](data/): NASA bearing dataset samples used in analysis
 
-Author: Tushar Tyagi
+## Quick Start
+
+### Firmware (PlatformIO)
+
+1. Install PlatformIO.
+2. Open this repository in VS Code.
+3. Build and flash using the environment in [platformio.ini](platformio.ini).
+
+### Python analysis
+
+1. Create and activate a virtual environment.
+2. Install required packages (numpy, scipy, matplotlib, pandas, paho-mqtt, influxdb-client).
+3. Run scripts or notebooks:
+   - `python test_fft.py`
+   - `python bridge.py`
+
+Note: package pinning and a single dependency file will be added as part of the polishing phase.
+
+## Data Source
+
+The project uses bearing run-to-failure files stored under [data/1st_test](data/1st_test).
+
+## Status
+
+Development stage: prototype.
+
+This repository is intended to show practical work on embedded sensing, signal processing, and data pipeline fundamentals.
+
+## Author
+
+Tushar Tyagi

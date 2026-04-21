@@ -58,7 +58,23 @@ The project uses bearing run-to-failure files stored under [data/1st_test](data/
 
 Development stage: prototype.
 
-This repository is intended to show practical work on embedded sensing, signal processing, and data pipeline fundamentals.
+This repository is intended to show practical work on embedded sensing, signal processing, and data pipeline fundamentals. 
+
+Here are demo videos
+
+First video captures the reading on InfluxDB and spike is caused due to failure caused manually to test edge device and pipeline functionality (successful here)
+Second video is a demonstration of a simulated failure and visualisaton of the normal vs failure mode simulation.
+
+
+
+
+https://github.com/user-attachments/assets/5c8f7229-af37-41d5-bd2a-2da6e96bec47
+
+
+https://github.com/user-attachments/assets/af29ff0a-1a9c-4cf2-8b18-1511adb899cf
+
+
+
 
 ## Author
 

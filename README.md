@@ -63,6 +63,7 @@ This repository is intended to show practical work on embedded sensing, signal p
 Here are demo videos
 
 First video captures the reading on InfluxDB and spike is caused due to failure caused manually to test edge device and pipeline functionality (successful here)
+
 Second video is a demonstration of a simulated failure and visualisaton of the normal vs failure mode simulation.
 
 

@@ -9,7 +9,7 @@
 [ SIGNAL ENGINE ] ────────────┘ 
     │ (Berechnung von Kurtosis, RMS, FFT)
     ▼
-[ AI PREDICTOR ] (Grok API / Scikit-Learn)
+[ AI PREDICTOR ] (Scikit-Learn)
     │ (Prediction: "Lager stirbt in 10h")
     ▼
 [ STREAMLIT DASHBOARD ]
